@@ -55,6 +55,27 @@ docker run rafaelpm/api-stress-test:v1 --url=https://httpbin.org/status/500 --re
 
 Note: public sites like Google may apply anti-bot protections and not return `200` consistently for automated traffic.
 
+## Example Response (4xx)
+Command:
+``` shell
+docker run rafaelpm/api-stress-test:latest --url=https://httpbin.org/status/400 --requests=5 --concurrency=2
+```
+
+Sample output:
+``` json
+{
+	"time_spent": "969.342666ms",
+	"requests_made": 5,
+	"successful_requests": 0,
+	"failed_requests": {
+		"3xx": 0,
+		"4xx": 5,
+		"5xx": 0,
+		"errors": 0
+	}
+}
+```
+
 
 
 ## Language and Runtime Features
