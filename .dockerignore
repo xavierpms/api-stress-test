@@ -1,0 +1,5 @@
+.vscode
+.gitignore
+.DS_Store
+README.md
+Makefile
